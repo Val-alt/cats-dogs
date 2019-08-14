@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Собачки</title>
+    <link href="img/favicon.png" rel="shortcut icon" type=" image/png" />
+  </head>
+  <body class="main-dogs">
+    <div class="dogs">
+      <div class="dogs__container">
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_01.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_02.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_03.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_04.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_05.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_06.png" alt="" />
+        </div>
+        <div class="dogs__item">
+          <img src="img/puppy_dogs_07.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center text-primary">
+              Картинки собачек
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Много мноооого
+                  <span class="breed text-primary">СОБАЧЕК :3</span>
+                </h5>
+                <div class="row line mt-2 mb-3">
+                  <div class="col-6 text-left">
+                    <button
+                      id="btnLeft"
+                      type="button"
+                      disabled
+                      class="btn btn-outline-primary"
+                    >
+                      сюда
+                    </button>
+                  </div>
+
+                  <div class="col-6 text-right">
+                    <button
+                      id="btnRight"
+                      type="button"
+                      class="btn btn-outline-primary"
+                    >
+                      туда
+                    </button>
+                  </div>
+                </div>
+                <div class="load-dog spinner-border text-info" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <div id="content" class="content">
+                  <img class="img-fluid" src="img/1.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-7">
+            <form onSubmit="return false;">
+              <!-- <form > -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <!-- <label for="exampleFormControlInput1"
+                      >Поиск по породам</label
+                    > -->
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="text-to-find"
+                      autocomplete="off"
+                      placeholder="Ввод породы..."
+                    />
+                    <div class="search">
+                      <ul class="search__items"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-5">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      загрузка пород
+                      <div
+                        class="load-breed spinner-border text-info spinner-border-sm ml-2 mb-1"
+                        role="status"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </button>
+                    <div
+                      class="dropdown-menu dogs-select"
+                      aria-labelledby="dropdownMenu2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script src="libs/jquery-3.3.1.min.js"></script>
+    <script src="libs/popper.js"></script>
+    <script src="exam.js"></script>
+    <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
