@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кошечки</title>
     <link href="favicon.png" rel="shortcut icon" type=" image/png" />
-    <link rel="stylesheet" href="assets/template/styles/catsdogs.min.css">
-</head>
+    <link rel="stylesheet" href="assets/template/styles/catsdogs.min.css" />
+  </head>
 
-<body class="main-cats">
+  <body class="main-cats">
     <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="text-center text-primary">
-                        Картинки кошечек
-                    </h1>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center text-primary">
+              Картинки кошечек
+            </h1>
+          </div>
         </div>
+      </div>
     </header>
     <section class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title1">
-                                Много мноооого
-                                <span class="breed text-primary">КОШЕЧЕК :3</span>
-                            </h5>
-                            <div class="row line mt-2 mb-3">
-                                <div class="col-6 text-left">
-                                    <button id="btnLeft1" type="button" disabled class="btn btn-outline-primary">
-                                        <i class="fas fa-arrow-left"></i>
-                                    </button>
-                                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Много мноооого
+                  <span class="breed text-primary">КОШЕЧЕК :3</span>
+                </h5>
+                <div class="row line mt-2 mb-3">
+                  <div class="col-6 text-left">
+                    <button
+                      id=""
+                      type="button"
+                      disabled
+                      class="btn btn-outline-primary btnLeft"
+                    >
+                      <i class="fas fa-arrow-left"></i>
+                    </button>
+                  </div>
 
-                                <div class="col-6 text-right">
-                                    <button id="btnRight1" type="button" class="btn btn-outline-primary">
-                                        <i class="fas fa-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="load-cat spinner-border text-info" role="status">
-                                <span class="sr-only">Loading...</span>
-                            </div>
-                            <div id="content1" class="content">
-                                <img class="img-fluid" src="assets/template/img/cats.jpg" />
-                            </div>
-                        </div>
-                    </div>
+                  <div class="col-6 text-right">
+                    <button
+                      id=""
+                      type="button"
+                      class="btn btn-outline-primary btnRight"
+                    >
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
                 </div>
-                <div class="col-7">
-                    <form onSubmit="return false;">
-                        <!-- <form > -->
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="text-to-find" autocomplete="off" placeholder="Ввод породы..." />
-                                    <div class="search">
-                                        <ul class="search__items"></ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 pt-5">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div
+                  class="load-pict-breed spinner-border text-info"
+                  role="status"
+                >
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <div id="content" class="content">
+                  <img class="img-fluid" src="assets/template/img/cats.jpg" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-7">
+            <form onSubmit="return false;">
+              <!-- <form > -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control text-to-find"
+                      id=""
+                      autocomplete="off"
+                      placeholder="Ввод породы..."
+                    />
+                    <div class="search">
+                      <ul class="search__items"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 pt-5">
+                  <div class="dropdown breeds-dropdown">
+                    <button
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
                       загрузка пород
                       <div
                         class="load-breed spinner-border text-info spinner-border-sm ml-2 mb-1"
@@ -76,88 +100,97 @@
                         <span class="sr-only">Loading...</span>
                       </div>
                     </button>
-                                    <div class="dropdown-menu dogs-select1" aria-labelledby="dropdownMenu2"></div>
-                                </div>
-                            </div>
-                            <div class="col-12 pt-2">
-                                <div class="row">
-                                    <p class="col-6">Срок жизни (лет)</p>
-                                    <div class="col-6" data-param="life_span"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Адаптируемость</p>
-                                    <div class="col-6 star" data-param="adaptability"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Уровень привязанности</p>
-                                    <div class="col-6 star" data-param="affection_level"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Дружелюбность с детьми</p>
-                                    <div class="col-6 star" data-param="child_friendly"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Дружелюбность с собаками</p>
-                                    <div class="col-6 star" data-param="dog_friendly"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Уровень энергии</p>
-                                    <div class="col-6 star" data-param="energy_level"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Длина шерсти</p>
-                                    <div class="col-6 star" data-param="grooming"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Проблемы со здоровьем</p>
-                                    <div class="col-6 star" data-param="health_issues"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Интеллект</p>
-                                    <div class="col-6 star" data-param="intelligence"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Уровень линьки</p>
-                                    <div class="col-6 star" data-param="shedding_level"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Социальные протребности</p>
-                                    <div class="col-6 star" data-param="social_needs"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Дружелюбность с незнакомыми</p>
-                                    <div class="col-6 star" data-param="stranger_friendly"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Голос</p>
-                                    <div class="col-6 star" data-param="vocalisation"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Экспериментальность</p>
-                                    <div class="col-6 star-one" data-param="experimental"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Редкость</p>
-                                    <div class="col-6 star-one" data-param="rare"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Отсутствие шерсти</p>
-                                    <div class="col-6 star-one" data-param="hairless"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Маленький хвост</p>
-                                    <div class="col-6 star-one" data-param="suppressed_tail"></div>
-                                </div>
-                                <div class="row">
-                                    <p class="col-6">Короткие ноги</p>
-                                    <div class="col-6 star-one" data-param="short_legs"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
+                    <div
+                      class="dropdown-menu breeds-select"
+                      aria-labelledby="dropdownMenu2"
+                    ></div>
+                  </div>
                 </div>
-            </div>
+                <div class="col-12 pt-2">
+                  <div class="row">
+                    <p class="col-6">Срок жизни (лет)</p>
+                    <div class="col-6" data-param="life_span"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Адаптируемость</p>
+                    <div class="col-6 star" data-param="adaptability"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Уровень привязанности</p>
+                    <div class="col-6 star" data-param="affection_level"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Дружелюбность с детьми</p>
+                    <div class="col-6 star" data-param="child_friendly"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Дружелюбность с собаками</p>
+                    <div class="col-6 star" data-param="dog_friendly"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Уровень энергии</p>
+                    <div class="col-6 star" data-param="energy_level"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Длина шерсти</p>
+                    <div class="col-6 star" data-param="grooming"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Проблемы со здоровьем</p>
+                    <div class="col-6 star" data-param="health_issues"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Интеллект</p>
+                    <div class="col-6 star" data-param="intelligence"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Уровень линьки</p>
+                    <div class="col-6 star" data-param="shedding_level"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Социальные протребности</p>
+                    <div class="col-6 star" data-param="social_needs"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Дружелюбность с незнакомыми</p>
+                    <div
+                      class="col-6 star"
+                      data-param="stranger_friendly"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Голос</p>
+                    <div class="col-6 star" data-param="vocalisation"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Экспериментальность</p>
+                    <div class="col-6 star-one" data-param="experimental"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Редкость</p>
+                    <div class="col-6 star-one" data-param="rare"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Отсутствие шерсти</p>
+                    <div class="col-6 star-one" data-param="hairless"></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Маленький хвост</p>
+                    <div
+                      class="col-6 star-one"
+                      data-param="suppressed_tail"
+                    ></div>
+                  </div>
+                  <div class="row">
+                    <p class="col-6">Короткие ноги</p>
+                    <div class="col-6 star-one" data-param="short_legs"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
     <script src="assets/template/scripts/catsdogs.min.js"></script>
     <!-- <script src="libs/jquery-3.3.1.min.js"></script>
@@ -165,6 +198,5 @@
     <script src="exam.js"></script>
     <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
     <script src="libs/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script> -->
-</body>
-
+  </body>
 </html>
