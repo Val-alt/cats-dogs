@@ -1,0 +1,43 @@
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  @media only screen and (max-width: 610px) {
+    font-size: 1.5rem;
+  }
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1,
+.title button {
+  display: inline-block;
+}
+
+.title__button {
+  display: inline-block;
+}
+
+.title__button .dropdown-toggle::after {
+  display: none;
+}
+
+.title__button .btn-secondary.dropdown-toggle {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.title__button .btn:focus {
+  box-shadow: none;
+}
+
+.title__button .dropdown-menu {
+  width: 220px;
+  overflow-y: hidden;
+}
+
+.title__button .fas {
+  color: #2e90c8;
+}

@@ -1,0 +1,57 @@
+.characteristics {
+  display: none;
+
+  p {
+    margin-bottom: 10px;
+    line-height: 20px;
+  }
+}
+
+.characteristic {
+  position: relative;
+}
+
+.characteristic__inner,
+.characteristic__outher {
+  position: absolute;
+  background-repeat: repeat;
+  display: block;
+  height: 22px;
+  background-size: contain;
+}
+
+.characteristic__inner {
+  background-image: url("../img/star.png");
+  width: 0px;
+}
+
+.characteristic__outher {
+  background-image: url("../img/star-no.png");
+  width: 110px;
+}
+
+.characteristic__outher--one-star {
+  width: 22px;
+}
+
+legend {
+  width: auto;
+  font-size: 19px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 610px) {
+    font-size: 17px;
+  }
+}
+
+fieldset {
+  padding: 5px 15px;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+
+  @media only screen and (max-width: 610px) {
+    font-size: 16px;
+  }
+}

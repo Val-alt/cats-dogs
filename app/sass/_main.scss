@@ -1,0 +1,103 @@
+body {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1360px;
+}
+
+.header {
+  padding: 40px 0px;
+
+  @media only screen and (max-width: 610px) {
+    padding: 20px 0px;
+  }
+}
+
+.icon:before {
+  font-family: FontAwesome;
+}
+
+.main {
+  padding: 10px 0px;
+}
+
+.fas {
+  color: #ffc400;
+}
+
+.btn--active {
+  display: block;
+}
+
+.dropdown-toggle {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dropdown-toggle::after {
+  float: right;
+  vertical-align: top;
+  margin-top: 14px;
+}
+
+.btn.dropdown-toggle {
+  padding: 6px 15px 10px;
+}
+
+.dropdown-menu {
+  max-height: 400px;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.card {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  min-height: 140px;
+}
+
+.btnLeft,
+.btnRight {
+  visibility: hidden;
+}
+
+.breed {
+  font-weight: bold;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.load-pict-breed.spinner-border {
+  display: none;
+  position: absolute;
+  top: 120px;
+  left: 45%;
+  border: 0.55em solid currentColor;
+  border-right-color: currentcolor;
+  border-right-color: transparent;
+  width: 3rem;
+  height: 3rem;
+}
+
+.btn-outline-primary .fas {
+  color: #26a69a;
+  transition: color 0.15s ease-in-out;
+}
+
+.btn-outline-primary:hover:enabled .fas {
+  color: #ffffff;
+}
+
+.breeds-dropdown {
+  margin-top: 3rem;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+.option .row {
+  margin: 0;
+}
+
+.option a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.option__btn {
+  height: 100vh;
+  padding: 0;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  border-top: 40px solid #fff;
+  border-bottom: 40px solid #fff;
+
+  @media only screen and (max-width: 987px) {
+    border-top: 20px solid #fff;
+    border-bottom: 20px solid #fff;
+  }
+
+  @media only screen and (max-width: 575px) {
+    height: 300px;
+  }
+}
+
+.option__btn--cat {
+  background-image: url("../img/cat-main.jpg");
+  background-color: #a7dde3;
+  border-left: 40px solid #fff;
+  border-right: 20px solid #fff;
+
+  @media only screen and (max-width: 987px) {
+    border-left: 20px solid #fff;
+    border-right: 10px solid #fff;
+  }
+
+  @media only screen and (max-width: 575px) {
+    border-right: 20px solid #fff;
+    border-bottom: 10px solid #fff;
+  }
+}
+
+.option__btn--dog {
+  background-image: url("../img/dog-main.jpg");
+  background-color: #eeb221;
+  border-right: 40px solid #fff;
+  border-left: 20px solid #fff;
+
+  @media only screen and (max-width: 987px) {
+    border-right: 20px solid #fff;
+    border-left: 10px solid #fff;
+  }
+
+  @media only screen and (max-width: 575px) {
+    border-left: 20px solid #fff;
+    border-top: 10px solid #fff;
+  }
+}
+
+.option__title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    text-align: right;
+    color: #fff;
+    position: relative;
+    display: block;
+    margin-top: -43px;
+    margin-right: -8px;
+    position: relative;
+  
+    @media only screen and (max-width: 1218px) {
+      font-size: 50px;
+      margin-top: -21px;
+      margin-right: -4px;
+    }
+  
+    @media only screen and (max-width: 575px) {
+      height: 10px;
+    }
+  }
+
+.option__line {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 20px;
+  background-color: #fff;
+  right: 0;
+  bottom: -10px;
+
+  @media only screen and (max-width: 1218px) {
+    height: 15px;
+  }
+
+  @media only screen and (max-width: 575px) {
+    height: 10px;
+  }
+}

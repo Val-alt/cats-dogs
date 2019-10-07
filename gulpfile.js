@@ -29,13 +29,10 @@ var paths = { src: "app/", dist: "dist/assets/template/" },
 gulp.task("sass", function() {
     return (
         gulp
-        // .src(["app/libs/**/*.css", "app/sass/app.scss"])
         .src([
             "app/libs/fontawesome-v5.11.2.css",
             "app/libs/bootstrap-4.3.1-dist/css/bootstrap.css",
-            "app/sass/style.css",
-
-            // "app/sass/app.scss",
+            "app/sass/app.scss",
         ])
         .pipe(sass().on("error", sass.logError))
         .pipe(concat("catsdogs.min.css"))
@@ -48,15 +45,12 @@ gulp.task("sass", function() {
 gulp.task("js", function() {
     return (
         gulp
-        // .src(["app/libs/**/*.js", src.js])
         .src([
             "app/libs/jquery-3.3.1.min.js",
             "app/libs/popper.js",
-
             "app/libs/bootstrap-4.3.1-dist/js/bootstrap.min.js",
             "app/libs/bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js",
             "app/scripts/exam.js",
-            // "app/scripts/app.js"
 
         ])
         .pipe(uglify())

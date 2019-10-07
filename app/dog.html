@@ -40,20 +40,27 @@
             <h1 class="text-center text-primary">
               Картинки собачек
             </h1>
-            <button class="title__button">
-              <i class="fas fa-chevron-down fa-lg"></i>
-            </button>
-            <!-- <div class="dropdown show">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Выпадающая ссылка
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div> -->
+            <div class="title__button">
+              <div class="dropdown show">
+                <a
+                  class="btn dropdown-toggle"
+                  href="#"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-chevron-down fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="index.html">На главную</a>
+                  <a class="dropdown-item" href="cat.html"
+                    >Посмотреть кошечек</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -61,7 +68,7 @@
     <section class="main">
       <div class="container">
         <div class="row">
-          <div class="col-5">
+          <div class="col-md-5 col-12">
             <div class="card">
               <div class="card-body">
                 <h5 class="card-title">
@@ -69,7 +76,7 @@
                   <span class="breed text-primary">СОБАЧЕК :3</span>
                 </h5>
                 <div class="row line mt-2 mb-3">
-                  <div class="col-6 text-left">
+                  <div class="col-6 text-right">
                     <button
                       id=""
                       type="button"
@@ -79,7 +86,7 @@
                       <i class="fas fa-arrow-left"></i>
                     </button>
                   </div>
-                  <div class="col-6 text-right">
+                  <div class="col-6 text-left">
                     <button
                       id=""
                       type="button"
@@ -101,28 +108,25 @@
               </div>
             </div>
           </div>
-          <div class="col-7">
+          <div class="col-md-7 col-12">
             <form onSubmit="return false;">
               <!-- <form > -->
               <div class="row">
                 <div class="col-12">
                   <div class="form-group">
-                    <!-- <label for="exampleFormControlInput1"
-                      >Поиск по породам</label
-                    > -->
                     <input
                       type="text"
                       class="form-control text-to-find"
                       id=""
                       autocomplete="off"
-                      placeholder="Ввод породы..."
+                      placeholder="Введите породу..."
                     />
                     <div class="search">
                       <ul class="search__items"></ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 pt-5">
+                <div class="col-12">
                   <div class="dropdown breeds-dropdown">
                     <button
                       class="btn btn-primary dropdown-toggle"

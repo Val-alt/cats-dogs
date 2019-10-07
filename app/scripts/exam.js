@@ -250,30 +250,55 @@ var App = {
         );
 
         if (className === "main-cats") {
+          $(".characteristics").show();
+          let widthStar;
+          if ($(window).width() > 610) {
+            widthStar = 22;
+          } else {
+            widthStar = 22;
+          }
           for (var key in itemObj) {
             if (key == "life_span") {
               $(classNameForJQ + 'div[data-param="' + key + '"]').html(
                 itemObj[key]
               );
-            } else if (
-              key == "experimental" ||
-              key == "rare" ||
-              key == "hairless" ||
-              key == "suppressed_tail" ||
-              key == "short_legs"
-            ) {
-              $(classNameForJQ + 'div[data-param="' + key + '"]').css(
-                "background-image",
-                "url('assets/template/img/" + itemObj[key] + "star-one.png')"
-              );
             } else if (key != "name" && key != "id" && key != "origin") {
               $(classNameForJQ + 'div[data-param="' + key + '"]').css(
-                "background-image",
-                "url('assets/template/img/" + itemObj[key] + "star.png')"
+                "width",
+                (itemObj[key] * widthStar + "px")
               );
+              console.log(key + "===" + $(classNameForJQ + 'div[data-param="' + key + '"]').css("width"));
             }
           }
         }
+
+        // if (className === "main-cats") {
+        //   $(".characteristics").show();
+        //   console.log((qqq * 20) + star);
+        //   for (var key in itemObj) {
+        //     if (key == "life_span") {
+        //       $(classNameForJQ + 'div[data-param="' + key + '"]').html(
+        //         itemObj[key]
+        //       );
+        //     } else if (
+        //       key == "experimental" ||
+        //       key == "rare" ||
+        //       key == "hairless" ||
+        //       key == "suppressed_tail" ||
+        //       key == "short_legs"
+        //     ) {
+        //       $(classNameForJQ + 'div[data-param="' + key + '"]').css(
+        //         "background-image",
+        //         "url('assets/template/img/" + itemObj[key] + "star-one.png')"
+        //       );
+        //     } else if (key != "name" && key != "id" && key != "origin") {
+        //       $(classNameForJQ + 'div[data-param="' + key + '"]').css(
+        //         "background-image",
+        //         "url('assets/template/img/" + itemObj[key] + "star.png')"
+        //       );
+        //     }
+        //   }
+        // }
 
         arrPreviousImage.push($(classNameForJQ + "#content").html());
         $(classNameForJQ + ".btnLeft").prop("disabled", true);
