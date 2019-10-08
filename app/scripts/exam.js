@@ -18,7 +18,6 @@ var App = {
     this.animateLine();
     this.loadingBreeds();
     this.btnLeftRight();
-    // this.searchBreed(translationBreeds);
   },
 
   animateLine: () => {
@@ -195,11 +194,13 @@ var App = {
             value +
             "</button>";
         }
+        $(".text-to-find").prop('disabled', false);
 
         $(classNameForJQ + ".breeds-select").html(html);
         if (className === "main-cats") {
           dataForPict = engCatBreeds;
         }
+
         App.clickDropdown(dataForPict);
         App.searchBreed(translationBreeds);
       }

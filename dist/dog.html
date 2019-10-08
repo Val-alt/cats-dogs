@@ -4,32 +4,32 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Собачки</title>
-    <link href="favicon.png" rel="shortcut icon" type=" image/png" />
+    <link href="favicon.png" rel="shortcut icon" type="image/png" />
     <link rel="stylesheet" href="assets/template/styles/catsdogs.min.css" />
   </head>
   <body class="main-dogs">
     <div class="dogs">
       <div class="dogs__container">
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_01.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_01.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_02.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_02.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_03.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_03.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_04.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_04.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_05.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_05.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_06.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_06.png" alt="Собачка" />
         </div>
         <div class="dogs__item">
-          <img src="assets/template/img/puppy_dogs_07.png" alt="" />
+          <img src="assets/template/img/puppy_dogs_07.png" alt="Собачка" />
         </div>
       </div>
     </div>
@@ -78,7 +78,6 @@
                 <div class="row line mt-2 mb-3">
                   <div class="col-6 text-right">
                     <button
-                      id=""
                       type="button"
                       disabled
                       class="btn btn-outline-primary btnLeft"
@@ -88,7 +87,6 @@
                   </div>
                   <div class="col-6 text-left">
                     <button
-                      id=""
                       type="button"
                       class="btn btn-outline-primary btnRight"
                     >
@@ -103,7 +101,11 @@
                   <span class="sr-only">Loading...</span>
                 </div>
                 <div id="content" class="content">
-                  <img class="img-fluid" src="assets/template/img/1.jpg" />
+                  <img
+                    class="img-fluid"
+                    src="assets/template/img/1.jpg"
+                    alt="Собачки"
+                  />
                 </div>
               </div>
             </div>
@@ -117,9 +119,9 @@
                     <input
                       type="text"
                       class="form-control text-to-find"
-                      id=""
                       autocomplete="off"
                       placeholder="Введите породу..."
+                      disabled="true"
                     />
                     <div class="search">
                       <ul class="search__items"></ul>
@@ -137,12 +139,12 @@
                       aria-expanded="false"
                     >
                       загрузка пород
-                      <div
+                      <span
                         class="load-breed spinner-border text-info spinner-border-sm ml-2 mb-1"
                         role="status"
                       >
                         <span class="sr-only">Loading...</span>
-                      </div>
+                      </span>
                     </button>
                     <div
                       class="dropdown-menu breeds-select"

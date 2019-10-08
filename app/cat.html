@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кошечки</title>
-    <link href="favicon.png" rel="shortcut icon" type=" image/png" />
+    <link href="favicon.png" rel="shortcut icon" type="image/png" />
     <link rel="stylesheet" href="assets/template/styles/catsdogs.min.css" />
   </head>
 
@@ -54,7 +54,6 @@
                 <div class="row line mt-2 mb-3">
                   <div class="col-6 text-right">
                     <button
-                      id=""
                       type="button"
                       disabled
                       class="btn btn-outline-primary btnLeft"
@@ -64,7 +63,6 @@
                   </div>
                   <div class="col-6 text-left">
                     <button
-                      id=""
                       type="button"
                       class="btn btn-outline-primary btnRight"
                     >
@@ -79,7 +77,11 @@
                   <span class="sr-only">Loading...</span>
                 </div>
                 <div id="content" class="content">
-                  <img class="img-fluid" src="assets/template/img/cats.jpg" />
+                  <img
+                    class="img-fluid"
+                    src="assets/template/img/cats.jpg"
+                    alt="Кошечки"
+                  />
                 </div>
               </div>
             </div>
@@ -93,9 +95,9 @@
                     <input
                       type="text"
                       class="form-control text-to-find"
-                      id=""
                       autocomplete="off"
                       placeholder="Введите породу..."
+                      disabled="true"
                     />
                     <div class="search">
                       <ul class="search__items"></ul>
@@ -113,12 +115,12 @@
                       aria-expanded="false"
                     >
                       загрузка пород
-                      <div
+                      <span
                         class="load-breed spinner-border text-info spinner-border-sm ml-2 mb-1"
                         role="status"
                       >
                         <span class="sr-only">Loading...</span>
-                      </div>
+                      </span>
                     </button>
                     <div
                       class="dropdown-menu breeds-select"
@@ -129,196 +131,196 @@
                 <div class="col-12 pt-2 characteristics">
                   <div class="row">
                     <div class="col-xl-6 col-12">
-                  <fieldset>
-                    <legend>Здоровье</legend>
-                    <div class="row ">
-                      <p class="col-6">Срок жизни (лет)</p>
-                      <div data-param="life_span"></div>
-                    </div>
-                    <div class="row">
-                      <p class="col-6">Уровень энергии</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="energy_level"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <p class="col-6">Проблемы со здоровьем</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="health_issues"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <p class="col-6">Уровень линьки</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="shedding_level"
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                      <legend>Внешний вид</legend>
-                      <div class="row">
-                        <p class="col-6">Длина шерсти</p>
-                        <div class="characteristic">
-                          <div class="characteristic__outher">
-                            <div
-                              class="characteristic__inner"
-                              data-param="grooming"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <p class="col-6">Отсутствие шерсти</p>
-                        <div class="characteristic">
-                          <div
-                            class="characteristic__outher characteristic__outher--one-star"
-                          >
-                            <div
-                              class="characteristic__inner"
-                              data-param="hairless"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <p class="col-6">Маленький хвост</p>
-                        <div class="characteristic">
-                          <div
-                            class="characteristic__outher characteristic__outher--one-star"
-                          >
-                            <div
-                              class="characteristic__inner"
-                              data-param="suppressed_tail"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <p class="col-6">Короткие ноги</p>
-                        <div class="characteristic">
-                          <div
-                            class="characteristic__outher characteristic__outher--one-star"
-                          >
-                            <div
-                              class="characteristic__inner"
-                              data-param="short_legs"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <div class="col-xl-6 col-12">
                       <fieldset>
-                          <legend>Дружелюбность</legend>
-                          <div class="row">
-                            <p class="col-6">С детьми</p>
-                            <div class="characteristic">
-                              <div class="characteristic__outher">
-                                <div
-                                  class="characteristic__inner"
-                                  data-param="child_friendly"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <p class="col-6">С собаками</p>
-                            <div class="characteristic">
-                              <div class="characteristic__outher">
-                                <div
-                                  class="characteristic__inner"
-                                  data-param="dog_friendly"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <p class="col-6">С незнакомыми</p>
-                            <div class="characteristic">
-                              <div class="characteristic__outher">
-                                <div
-                                  class="characteristic__inner"
-                                  data-param="stranger_friendly"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <p class="col-6">Уровень привязанности</p>
-                            <div class="characteristic">
-                              <div class="characteristic__outher">
-                                <div
-                                  class="characteristic__inner"
-                                  data-param="affection_level"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <p class="col-6">Социальные протребности</p>
-                            <div class="characteristic">
-                              <div class="characteristic__outher">
-                                <div
-                                  class="characteristic__inner"
-                                  data-param="social_needs"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </fieldset>
-              
-                  <fieldset>
-                    <legend>Прочее</legend>
-                    <div class="row">
-                      <p class="col-6">Адаптируемость</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="adaptability"
-                          ></div>
+                        <legend>Здоровье</legend>
+                        <div class="row ">
+                          <p class="col-6">Срок жизни (лет)</p>
+                          <div data-param="life_span"></div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <p class="col-6">Интеллект</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="intelligence"
-                          ></div>
+                        <div class="row">
+                          <p class="col-6">Уровень энергии</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="energy_level"
+                              ></div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <p class="col-6">Голос</p>
-                      <div class="characteristic">
-                        <div class="characteristic__outher">
-                          <div
-                            class="characteristic__inner"
-                            data-param="vocalisation"
-                          ></div>
+                        <div class="row">
+                          <p class="col-6">Проблемы со здоровьем</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="health_issues"
+                              ></div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                        <div class="row">
+                          <p class="col-6">Уровень линьки</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="shedding_level"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                        <legend>Внешний вид</legend>
+                        <div class="row">
+                          <p class="col-6">Длина шерсти</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="grooming"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Отсутствие шерсти</p>
+                          <div class="characteristic">
+                            <div
+                              class="characteristic__outher characteristic__outher--one-star"
+                            >
+                              <div
+                                class="characteristic__inner"
+                                data-param="hairless"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Маленький хвост</p>
+                          <div class="characteristic">
+                            <div
+                              class="characteristic__outher characteristic__outher--one-star"
+                            >
+                              <div
+                                class="characteristic__inner"
+                                data-param="suppressed_tail"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Короткие ноги</p>
+                          <div class="characteristic">
+                            <div
+                              class="characteristic__outher characteristic__outher--one-star"
+                            >
+                              <div
+                                class="characteristic__inner"
+                                data-param="short_legs"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
                     </div>
-                    <!-- <div class="row">
+                    <div class="col-xl-6 col-12">
+                      <fieldset>
+                        <legend>Дружелюбность</legend>
+                        <div class="row">
+                          <p class="col-6">С детьми</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="child_friendly"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">С собаками</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="dog_friendly"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">С незнакомыми</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="stranger_friendly"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Уровень привязанности</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="affection_level"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Социальные протребности</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="social_needs"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </fieldset>
+
+                      <fieldset>
+                        <legend>Прочее</legend>
+                        <div class="row">
+                          <p class="col-6">Адаптируемость</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="adaptability"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Интеллект</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="intelligence"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <p class="col-6">Голос</p>
+                          <div class="characteristic">
+                            <div class="characteristic__outher">
+                              <div
+                                class="characteristic__inner"
+                                data-param="vocalisation"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="row">
                       <p class="col-6">Экспериментальность</p>
                       <div class="characteristic">
                         <div
@@ -331,22 +333,22 @@
                         </div>
                       </div>
                     </div> -->
-                    <div class="row">
-                      <p class="col-6">Редкость</p>
-                      <div class="characteristic">
-                        <div
-                          class="characteristic__outher characteristic__outher--one-star"
-                        >
-                          <div
-                            class="characteristic__inner"
-                            data-param="rare"
-                          ></div>
+                        <div class="row">
+                          <p class="col-6">Редкость</p>
+                          <div class="characteristic">
+                            <div
+                              class="characteristic__outher characteristic__outher--one-star"
+                            >
+                              <div
+                                class="characteristic__inner"
+                                data-param="rare"
+                              ></div>
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      </fieldset>
                     </div>
-                  </fieldset>
-                </div>
-              </div>
+                  </div>
                 </div>
               </div>
             </form>
