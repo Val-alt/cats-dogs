@@ -87,11 +87,6 @@ gulp.task("ico", function() {
         .pipe(gulp.dest("dist"));
 });
 
-gulp.task("file", function() {
-    return gulp
-        .src("app/file/*")
-        .pipe(gulp.dest("dist/assets/template/file"));
-});
 
 // очистка папки с готовым проектом
 gulp.task("clean", function() {
@@ -100,7 +95,7 @@ gulp.task("clean", function() {
 
 gulp.task(
     "build",
-    gulp.parallel("clean", "html", "ico", "sass", "js", "img", "fonts", "file")
+    gulp.parallel("clean", "html", "ico", "sass", "js", "img", "fonts")
 );
 
 gulp.task("browser-sync", function() {

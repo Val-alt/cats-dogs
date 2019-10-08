@@ -18,7 +18,7 @@ var App = {
     this.animateLine();
     this.loadingBreeds();
     this.btnLeftRight();
-    this.searchBreed();
+    // this.searchBreed(translationBreeds);
   },
 
   animateLine: () => {
@@ -195,11 +195,13 @@ var App = {
             value +
             "</button>";
         }
+
         $(classNameForJQ + ".breeds-select").html(html);
         if (className === "main-cats") {
           dataForPict = engCatBreeds;
         }
         App.clickDropdown(dataForPict);
+        App.searchBreed(translationBreeds);
       }
     });
   },
@@ -265,40 +267,18 @@ var App = {
             } else if (key != "name" && key != "id" && key != "origin") {
               $(classNameForJQ + 'div[data-param="' + key + '"]').css(
                 "width",
-                (itemObj[key] * widthStar + "px")
+                itemObj[key] * widthStar + "px"
               );
-              console.log(key + "===" + $(classNameForJQ + 'div[data-param="' + key + '"]').css("width"));
+              console.log(
+                key +
+                  "===" +
+                  $(classNameForJQ + 'div[data-param="' + key + '"]').css(
+                    "width"
+                  )
+              );
             }
           }
         }
-
-        // if (className === "main-cats") {
-        //   $(".characteristics").show();
-        //   console.log((qqq * 20) + star);
-        //   for (var key in itemObj) {
-        //     if (key == "life_span") {
-        //       $(classNameForJQ + 'div[data-param="' + key + '"]').html(
-        //         itemObj[key]
-        //       );
-        //     } else if (
-        //       key == "experimental" ||
-        //       key == "rare" ||
-        //       key == "hairless" ||
-        //       key == "suppressed_tail" ||
-        //       key == "short_legs"
-        //     ) {
-        //       $(classNameForJQ + 'div[data-param="' + key + '"]').css(
-        //         "background-image",
-        //         "url('assets/template/img/" + itemObj[key] + "star-one.png')"
-        //       );
-        //     } else if (key != "name" && key != "id" && key != "origin") {
-        //       $(classNameForJQ + 'div[data-param="' + key + '"]').css(
-        //         "background-image",
-        //         "url('assets/template/img/" + itemObj[key] + "star.png')"
-        //       );
-        //     }
-        //   }
-        // }
 
         arrPreviousImage.push($(classNameForJQ + "#content").html());
         $(classNameForJQ + ".btnLeft").prop("disabled", true);
@@ -341,73 +321,56 @@ var App = {
     });
   },
 
-  searchBreed: () => {
+  searchBreed: translationBreeds => {
     let values;
     let html;
     $(".text-to-find").keyup(function(event) {
       event.preventDefault();
       let search = $(event.target).val();
-      let JSON_SAVE;
-      if (className === "main-dogs") {
-        JSON_SAVE = "assets/template/file/dogs.json";
-      }
-      if (className === "main-cats") {
-        JSON_SAVE = "assets/template/file/cats.json";
-      }
-      $.get(JSON_SAVE)
-        .then(result => {
-          values = Object.values(result);
-          html = "";
-          for (let value of values) {
-            let valueOne = value.substring(0, search.length);
-            if (search === valueOne && search != "") {
-              html += "<li class='search__item'>" + value + "</li>";
-              $(classNameForJQ + ".search").css("display", "block");
-              $(classNameForJQ + ".search__items").html(html);
+      values = Object.values(translationBreeds);
+      html = "";
+      for (let value of values) {
+        let valueOne = value.substring(0, search.length);
+        if (search === valueOne && search != "") {
+          html += "<li class='search__item'>" + value + "</li>";
+          $(classNameForJQ + ".search").css("display", "block");
+          $(classNameForJQ + ".search__items").html(html);
 
-              $(".search__item").on("click", event => {
-                arrPreviousImage = [];
-                let itemRusBreed = $(event.target).html();
-                let itemBreed = App.getKeyByValue(
-                  translationBreeds,
-                  itemRusBreed
-                );
-                if (className === "main-dogs") {
-                  itemId = itemBreed;
-                }
-                if (className === "main-cats") {
-                  itemId = engCatBreeds[itemBreed];
-                  itemObj = engCatsObj.find(x => x.name === itemBreed);
-                }
-                App.pictBreed(itemId, itemRusBreed, itemObj);
-                $(classNameForJQ + ".text-to-find").val("");
-              });
+          $(".search__item").on("click", event => {
+            arrPreviousImage = [];
+            let itemRusBreed = $(event.target).html();
+            let itemBreed = App.getKeyByValue(translationBreeds, itemRusBreed);
+            if (className === "main-dogs") {
+              itemId = itemBreed;
             }
-          }
-
-          if (search == "") {
-            html = "";
-            $(classNameForJQ + ".search__items").html(html);
-            $(classNameForJQ + ".search").css("display", "none");
-          }
-
-          $(document).on("click", event => {
-            if (!$(classNameForJQ + ".text-to-find").is(event.target)) {
-              html = "";
-              $(classNameForJQ + ".search__items").html(html);
-              $(classNameForJQ + ".search").css("display", "none");
+            if (className === "main-cats") {
+              itemId = engCatBreeds[itemBreed];
+              itemObj = engCatsObj.find(x => x.name === itemBreed);
             }
+            App.pictBreed(itemId, itemRusBreed, itemObj);
+            $(classNameForJQ + ".text-to-find").val("");
           });
-        })
-        .catch(data => {
-          // если ошибка
-          console.log(data);
-        });
+        }
+      }
+
+      if (search == "") {
+        html = "";
+        $(classNameForJQ + ".search__items").html(html);
+        $(classNameForJQ + ".search").css("display", "none");
+      }
+
+      $(document).on("click", event => {
+        if (!$(classNameForJQ + ".text-to-find").is(event.target)) {
+          html = "";
+          $(classNameForJQ + ".search__items").html(html);
+          $(classNameForJQ + ".search").css("display", "none");
+        }
+      });
 
       if (event.keyCode == 27) {
         this.value = "";
         html = "";
-        $(classNameForJQ + ".search__items").html(html);
+        this.value = "";
         $(classNameForJQ + ".search").css("display", "none");
       }
 
@@ -415,10 +378,11 @@ var App = {
         if (search.length < 4) {
           alert("Введите четыре или более символов");
           this.value = "";
+          $(classNameForJQ + ".search").css("display", "none");
         }
         if (search.length >= 4) {
           var regexp = /[a-z\s]/i;
-          if (regexp.engCatsObj($(this).val())) {
+          if (regexp.test($(this).val())) {
             alert("Некорректный ввод");
             this.value = "";
           } else {
@@ -434,6 +398,8 @@ var App = {
                 itemObj = engCatsObj.find(x => x.name === itemBreed);
               }
               App.pictBreed(itemId, itemRusBreed, itemObj);
+              this.value = "";
+              $(classNameForJQ + ".search").css("display", "none");
             } else {
               alert("Такой породы нет, попробуйте еще раз");
               this.value = "";
