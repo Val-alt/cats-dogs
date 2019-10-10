@@ -35,34 +35,12 @@
     </div>
     <header class="header">
       <div class="container">
-        <div class="row">
-          <div class="col-12 title">
-            <h1 class="text-center text-primary">
-              Картинки собачек
-            </h1>
-            <div class="title__button">
-              <div class="dropdown show">
-                <a
-                  class="btn dropdown-toggle"
-                  href="#"
-                  role="button"
-                  id="dropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  <i class="fas fa-chevron-down fa-lg"></i>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="index.html">На главную</a>
-                  <a class="dropdown-item" href="cat.html"
-                    >Посмотреть кошечек</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="row title">
+              <h1 class="text-center text-primary">
+                Картинки собачек
+              </h1>
+            <a href="index.html"><img class="title__img" src="assets/template/img/logo.png"></a>
           </div>
-        </div>
       </div>
     </header>
     <section class="main">
@@ -123,6 +101,9 @@
                       placeholder="Введите породу..."
                       disabled="true"
                     />
+                    <button class="form-group__btn" disabled="true">
+                      <i class="fas fa-search"></i>
+                    </button>
                     <div class="search">
                       <ul class="search__items"></ul>
                     </div>

@@ -194,7 +194,8 @@ var App = {
             value +
             "</button>";
         }
-        $(".text-to-find").prop('disabled', false);
+        $(classNameForJQ + ".text-to-find").prop('disabled', false);
+        $(classNameForJQ + ".form-group__btn").prop('disabled', false);
 
         $(classNameForJQ + ".breeds-select").html(html);
         if (className === "main-cats") {
@@ -202,7 +203,7 @@ var App = {
         }
 
         App.clickDropdown(dataForPict);
-        App.searchBreed(translationBreeds);
+        App.searchBreed(sortedRusBreeds);
       }
     });
   },
@@ -270,13 +271,6 @@ var App = {
                 "width",
                 itemObj[key] * widthStar + "px"
               );
-              console.log(
-                key +
-                  "===" +
-                  $(classNameForJQ + 'div[data-param="' + key + '"]').css(
-                    "width"
-                  )
-              );
             }
           }
         }
@@ -322,13 +316,14 @@ var App = {
     });
   },
 
-  searchBreed: translationBreeds => {
+  searchBreed: sortedRusBreeds => {
     let values;
     let html;
+    let search;
     $(".text-to-find").keyup(function(event) {
       event.preventDefault();
-      let search = $(event.target).val();
-      values = Object.values(translationBreeds);
+      search = $(event.target).val().toLowerCase();
+      values = sortedRusBreeds;
       html = "";
       for (let value of values) {
         let valueOne = value.substring(0, search.length);
@@ -370,41 +365,39 @@ var App = {
 
       if (event.keyCode == 27) {
         this.value = "";
-        html = "";
-        this.value = "";
         $(classNameForJQ + ".search").css("display", "none");
       }
 
-      if (event.keyCode == 13) {
-        if (search.length < 4) {
-          alert("Введите четыре или более символов");
-          this.value = "";
-          $(classNameForJQ + ".search").css("display", "none");
-        }
-        if (search.length >= 4) {
-          var regexp = /[a-z\s]/i;
-          if (regexp.test($(this).val())) {
-            alert("Некорректный ввод");
-            this.value = "";
-          } else {
-            if (App.getKeyByValue(translationBreeds, search)) {
-              arrPreviousImage = [];
-              let itemBreed = App.getKeyByValue(translationBreeds, search);
-              let itemRusBreed = search;
-              if (className === "main-dogs") {
-                itemId = itemBreed;
-              }
-              if (className === "main-cats") {
-                itemId = engCatBreeds[itemBreed];
-                itemObj = engCatsObj.find(x => x.name === itemBreed);
-              }
-              App.pictBreed(itemId, itemRusBreed, itemObj);
-              this.value = "";
-              $(classNameForJQ + ".search").css("display", "none");
-            } else {
-              alert("Такой породы нет, попробуйте еще раз");
-              this.value = "";
+    });
+
+    $(".form-group__btn").on("click", () => {
+      if (search.length < 4) {
+        $(".text-to-find")[0].value = "";
+        $(classNameForJQ + ".search").css("display", "none");
+        alert("Введите четыре или более символов");
+      } else if (search.length >= 4) {
+        var regexp = /[a-z\s]/i;
+        if (regexp.test(search)) {
+          $(".text-to-find")[0].value = "";
+          alert("Некорректный ввод");
+        } else {
+          if (App.getKeyByValue(translationBreeds, search)) {
+            arrPreviousImage = [];
+            let itemBreed = App.getKeyByValue(translationBreeds, search);
+            let itemRusBreed = search;
+            if (className === "main-dogs") {
+              itemId = itemBreed;
             }
+            if (className === "main-cats") {
+              itemId = engCatBreeds[itemBreed];
+              itemObj = engCatsObj.find(x => x.name === itemBreed);
+            }
+            App.pictBreed(itemId, itemRusBreed, itemObj);
+            $(".text-to-find")[0].value = "";
+            $(classNameForJQ + ".search").css("display", "none");
+          } else {
+            alert("Такой породы нет, попробуйте еще раз");
+            $(".text-to-find")[0].value = "";
           }
         }
       }
