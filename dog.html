@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Собачки</title>
+    <link href="favicon.png" rel="shortcut icon" type="image/png" />
+    <link rel="stylesheet" href="assets/template/styles/catsdogs.min.css" />
+  </head>
+  <body data-page="dogs">
+    <div class="dogs">
+      <div class="dogs__container">
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_01.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_02.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_03.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_04.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_05.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_06.png" alt="Собачка" />
+        </div>
+        <div class="dogs__item">
+          <img src="assets/template/img/puppy_dogs_07.png" alt="Собачка" />
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+          <div class="row title">
+              <h1 class="text-center text-primary">
+                Картинки собачек
+              </h1>
+            <a href="index.html"><img class="title__img" src="assets/template/img/logo.png"></a>
+          </div>
+      </div>
+    </header>
+    <section class="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-12">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title" data-card="title">
+                  Много мноооого
+                  <span class="breed text-primary">СОБАЧЕК :3</span>
+                </h5>
+                <div class="row line mt-2 mb-3">
+                  <div class="col-6 text-right">
+                    <button
+                      type="button"
+                      disabled
+                      class="btn btn-outline-primary btnLeft"
+                      data-btn="left-pict"
+                    >
+                      <i class="fas fa-arrow-left"></i>
+                    </button>
+                  </div>
+                  <div class="col-6 text-left">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary btnRight"
+                      data-btn="right-pict"
+                    >
+                      <i class="fas fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="load-pict-breed spinner-border text-info"
+                  role="status"
+                  data-icon="load-pict"
+                >
+                  <span class="sr-only">Loading...</span>
+                </div>
+                <div class="content" data-card="content">
+                  <img
+                    class="img-fluid"
+                    src="assets/template/img/1.jpg"
+                    alt="Собачки"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 col-12">
+            <form onSubmit="return false;">
+              <!-- <form > -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control text-to-find"
+                      autocomplete="off"
+                      placeholder="Введите породу..."
+                      disabled="true"
+                      data-search="input"
+                    />
+                    <button class="form-group__btn" disabled="true" data-btn="search">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <div class="search" data-search="result">
+                      <ul class="search__items" data-search="list"></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="dropdown breeds-dropdown">
+                    <button
+                      class="btn btn-primary dropdown-toggle"
+                      type="button"
+                      id="dropdownMenu2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      загрузка пород
+                      <span
+                        class="spinner-border text-info spinner-border-sm ml-2 mb-1"
+                        role="status"
+                        data-icon="load-breed"
+                      >
+                        <span class="sr-only">Loading...</span>
+                      </span>
+                    </button>
+                    <div
+                      class="dropdown-menu breeds-select"
+                      aria-labelledby="dropdownMenu2"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="assets/template/scripts/catsdogs.min.js"></script>
+  </body>
+</html>
