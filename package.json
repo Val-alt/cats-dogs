@@ -31,6 +31,7 @@
         "gulp-sass": "^4.0.2",
         "gulp-sourcemaps": "^2.6.4",
         "gulp-uglify": "^3.0.1",
+        "js-yaml": "^3.13.1",
         "tar": "^4.4.8",
         "uglify-es": "^3.3.9"
     }
